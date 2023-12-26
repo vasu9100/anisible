@@ -1,0 +1,9 @@
+---
+- name: This is SSH Key Authentication
+  hosts: all
+  become: yes
+  tasks
+    - name: SSH-KEY-GEN
+      community.crypto.openssh_keypair:
+        path: /home/centos/.ssh/id_rsa
+        type: 2048
