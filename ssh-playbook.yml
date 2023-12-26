@@ -2,8 +2,9 @@
 - name: This is SSH Key Authentication
   hosts: all
   become: yes
-  tasks
-    - name: SGenerate an OpenSSH rsa keypair with a different size (2048 bits)
+  tasks:
+    - name: Generate an OpenSSH rsa keypair with a different size (2048 bits)
       community.crypto.openssh_keypair:
         path: /home/centos/.ssh/id_rsa
-        type: 2048
+        type: rsa
+        size: 2048
