@@ -3,7 +3,7 @@
   hosts: all
   become: yes
   tasks
-    - name: SSH-KEY-GEN
+    - name: SGenerate an OpenSSH rsa keypair with a different size (2048 bits)
       community.crypto.openssh_keypair:
         path: /home/centos/.ssh/id_rsa
         type: 2048
